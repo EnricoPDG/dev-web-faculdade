@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Comfortaa';
+}
+
+.btn-wrapper {
+    /* flexbox */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.btn {
+    color: #000;
+    background-color: #fff;
+    border: 0 solid #cecece;
+    padding: .35rem 1rem .25rem 1rem;
+    font-size: 1rem;
+    font-family: 'Comfortaa';
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #000;
+    width: 100%;
+    padding: .75rem;
+    font-size: 1.3rem;
+    border: black solid 0;
+    margin: 1rem 0;
+}
+
+.btn-primary:hover {
+    background-color: #0099ff;
+    transition: .5s;
+}
+
+.btn-primary:focus {
+    outline: none;
+    border: #000 solid 0px;
+    background-color: #005892;
+    transition: .5s;
+}
+
+.btn-primary:active {
+    background-color: #212020;
+}
+
+.main {
+    max-width: 500px;
+    width: 85%;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2), 0 2.5rem 5rem 0 rgba(0, 0, 0, .1);
+}
+
+
+@media screen and (min-width: 600px) {
+    .main {
+        width: 70%;
+    }
+}
+
+label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+    padding-bottom: 1rem;
+}
+
+.lg-text-input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #000;
+    display: block;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.btn-wrapper {
+    margin-bottom: 2rem;
+}
+
+.btn-menu {
+    flex-basis: 32%;
+}
+
+.active {
+    color: green;
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
