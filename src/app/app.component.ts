@@ -47,7 +47,6 @@ export class AppComponent {
     this.allItems.splice(a - 1, 0, item);
   }
   
-
   removeAllDone() {
     for (let index = this.allItems.length - 1; index >= 0; index--) {
       const element = this.allItems[index];
