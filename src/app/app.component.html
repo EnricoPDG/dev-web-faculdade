@@ -19,7 +19,7 @@
     <button class="btn-primary" (click)="removeAllDone();" *ngIf="filter == 'all'">Delete all done</button>
     <!-- Buttons that show all, still to do, or done items on click -->
     <div class="btn-wrapper">
-      <button class="btn btn-menu" [class.active]="filter == 'all'" (click)="filter = 'all'">All</button>
+      <button class="btn btn-menu" [class.active]="filter == 'all'" (click)="filter = 'all'; letodosRegistros()">All</button>
       <button class="btn btn-menu" [class.active]="filter == 'active'" (click)="filter = 'active'">To Do</button>
       <button class="btn btn-menu" [class.active]="filter == 'done'" (click)="filter = 'done'">Done</button>
     </div>
@@ -28,7 +28,7 @@
     </h2>
     <ul>
       <li *ngFor="let item of items" >
-        <app-item (remove)="remove(item)" [item]="item" (changePositionDown)="changePositionDown(item)" (changePositionUp)="changePositionUp(item)" [filter]="filter"> 
+        <app-item (updateItem)="updateItem(item)" (remove)="remove(item)" [item]="item" (changePositionDown)="changePositionDown(item)" (changePositionUp)="changePositionUp(item)" [filter]="filter"> 
         </app-item>
       </li>
     </ul>

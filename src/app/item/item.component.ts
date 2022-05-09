@@ -15,10 +15,7 @@ export class ItemComponent {
   @Output() remove = new EventEmitter<Item>();
   @Output() changePositionDown = new EventEmitter<Item>();
   @Output() changePositionUp = new EventEmitter<Item>();
-  
-  saveItem(description) {
-    if (!description) return;
-    this.editable = false;
-    this.item.description = description;
-  }
+  @Output() updateItem = new EventEmitter<Item>();
 }
+
+
