@@ -1,20 +1,19 @@
 <div class="item">
     <input [id]="item.description" type="checkbox" (change)="item.done = !
-   item.done" [checked]="item.done" />
+   item.done; updateItem.emit()" [checked]="item.done" />
     <label [for]="item.description">{{item.description}}</label>
     <div class="btn-wrapper" *ngIf="!editable">
-        <button class="btn" (click)="editable = !editable; updateItem.emit()">Edit</button>
+        <button class="btn" (click)="editable = !editable;">Edit</button>
         <button class="btn btn-warn" (click)="remove.emit()">Delete</button>
         <button class="btn btn-warn" (click)="changePositionDown.emit()" *ngIf="filter == 'all'">-</button>
         <button class="btn btn-warn" (click)="changePositionUp.emit()" *ngIf="filter == 'all'">+</button>
     </div>
     <!-- This section shows only if user clicks Edit button -->
     <div *ngIf="editable">
-        <input class="sm-text-input" placeholder="edit item" [value]="item.description" #editedItem
-            (keyup.enter)="updateItem.emit()">
+        <input class="sm-text-input" placeholder="edit item" [value]="item.description" #editedItem>
         <div class="btn-wrapper">
             <button class="btn" (click)="editable = !editable">Cancel</button>
-            <button class="btn btn-save" (click)="updateItem.emit()">Save</button>
+            <button class="btn btn-save" (click)="item.description = editedItem.value; updateItem.emit()">Save</button>
         </div>
     </div>
 </div>
