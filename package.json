@@ -6,7 +6,8 @@
     "start": "ng serve --proxy-config proxy.config.json",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "dev": "node index.js mongodb+srv://thomas168760-enrico202410:996831999t@cluster0.ag0zu.mongodb.net/tasksDB?retryWrites=true&w=majority"
   },
   "private": true,
   "dependencies": {
